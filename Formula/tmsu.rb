@@ -7,9 +7,9 @@ class Tmsu < Formula
 
   def install
     ENV["GOPATH"] = buildpath
-    system "go", "get", "-u", "golang.org/x/crypto/blake2b"
-    system "go", "get", "-u", "github.com/mattn/go-sqlite3"
-    system "go", "get", "-u", "github.com/hanwen/go-fuse/fuse"
+    system "go", "get", "-u", "-v", "golang.org/x/crypto/blake2b"
+    system "go", "get", "-u", "-v", "github.com/mattn/go-sqlite3"
+    system "go", "get", "-u", "-v", "github.com/hanwen/go-fuse/fuse"
     system "make", "clean"
     system "make", "compile"
     system "make", "dist"
